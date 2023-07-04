@@ -322,6 +322,8 @@
                     <img src="{{asset('/images/brands.png')}}" height="30" alt="">
                 </div>
             </div>
+
+            
         </div>
     </section>
 @endsection
