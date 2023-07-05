@@ -30,7 +30,7 @@ class UserController extends Controller
             'email_verified_at' => date('Y-m-d H:i:s', time()),
         ];
 
-        $user = User::firstOrCreate(['email'=>['email']], $data);
+        $user = User::firstOrCreate(['email'=>$data['email']], $data);
         Auth::login($user, true);
 
         return redirect(route('welcome'));
