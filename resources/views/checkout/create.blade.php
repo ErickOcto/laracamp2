@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Card Number</label>
-                                    <input name="card_number" type="number" class="form-control {{$errors->has('card_number') ? 'is_invalid' : ''}}" value="{{old('occupation') ?: ''}}"required/>
+                                    <input name="card_number" type="number" class="form-control {{$errors->has('card_number') ? 'is_invalid' : ''}}" value="{{old('card_number') ?: ''}}"required/>
                                     @if($errors->has('card_number'))
                                         <p class="text-danger">{{$errors->first('card_number')}}</p>
                                     @endif
