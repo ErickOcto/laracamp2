@@ -18,6 +18,9 @@ class Checkout extends Model
         'payment_status',
         'midtrans_url',
         'midtrans_booking_code',
+        'discount_id',
+        'discount_percentage',
+        'total',
     ];
 
     public function setExpiredAttribute($value)
@@ -29,9 +32,15 @@ class Checkout extends Model
     {
         return $this->belongsTo(Camp::class);
     }
-  
+
     public function User(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
+
+    public function Discount(): BelongsTo
+    {
+        return $this->belongsTo(Discount::class);
+    }
 }
+
